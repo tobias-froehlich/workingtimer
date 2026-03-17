@@ -8,6 +8,7 @@ settings = {
     'activityDirectory': '',
     'machineName': '',
     'allMachineNames': [],
+    'outputDirectoryForMonth': ''
 }
 
 with open('settings.json', 'w') as f:
