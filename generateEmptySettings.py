@@ -1,4 +1,5 @@
 import os
+import json
 
 if os.path.exists('settings.json'):
     raise Exception('File settings.json already exists.')

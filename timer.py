@@ -1,7 +1,7 @@
 import time
 import datetime
 import subprocess
-import os
+from pathlib import Path
 from settings import getSettings
 
 settings = getSettings()
@@ -15,7 +15,7 @@ text=True).stdout
     print(dateTime)
     print(date)
     activityFile = f'activity_{settings["machineName"]}_{date}.txt'
-    activityPathFile = os.path.join(settings['activityDirectory'], activityFile)
+    activityPathFile = Path(settings['activityDirectory']) / activityFile
     if 'The screensaver is inactive' in a:
         with open(activityPathFile, 'a') as f:
             f.write(f'{dateTime},active\n')
