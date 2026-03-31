@@ -33,8 +33,8 @@ for i in range(len(lines) - 1):
     if time < datetime.timedelta(minutes=2):
         if lines[i][1] == 'active' and lines[i+1][1] == 'active':
             timeActive += time
-    else:
-        timeInactive += time
+        else:
+            timeInactive += time
 
 print(timeActive)
 print(timeInactive)
